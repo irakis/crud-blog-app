@@ -1,13 +1,13 @@
 import React from 'react';
 
-const Post = () => {
+const Posts = () => {
     return (
         <div>
-          <p>
+          <h2>
             List of posts!
-          </p>
+          </h2>
         </div>
     )
 };
 
-export default Post;
+export default Posts;

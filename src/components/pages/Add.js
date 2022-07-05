@@ -3,9 +3,9 @@ import React from 'react';
 const Add = () => {
   return (
       <div>
-          <p>
+          <h2>
             Add post here!
-          </p>
+          </h2>
       </div>
   )
 };

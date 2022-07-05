@@ -3,9 +3,9 @@ import React from 'react';
 const Edit = () => {
     return (
         <div>
-          <p>
+          <h2>
             Edit post here!
-          </p>
+          </h2>
       </div>
     )
 };

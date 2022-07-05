@@ -1,8 +1,10 @@
 import React from 'react';
+import { Container } from 'react-bootstrap';
 
 const Footer = () => {
     return (
-        <h2>Footer</h2>
+
+        <Container className='text-center text-muted mt-5'>Copyright @ BlogApp 2022</Container>
     )
 }
 export default Footer;

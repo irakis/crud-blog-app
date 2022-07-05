@@ -1,5 +1,9 @@
 //selectors
-
+export const getAllCards = (state) => {
+    return (
+        state.posts
+    )
+};
 //actions
 const createActionName = actionName =>  `app/posts/${actionName}`;
 

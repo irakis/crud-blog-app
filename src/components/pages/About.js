@@ -3,9 +3,9 @@ import React from 'react';
 const About = () => {
     return (
         <div>
-          <p>
+          <h2>
             About the page!
-          </p>
+          </h2>
       </div>
     )
 }
