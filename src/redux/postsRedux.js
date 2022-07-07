@@ -1,11 +1,12 @@
 //selectors
 export const getAllCards = (state) => {
-    return (
-        state.posts
-    )
+    return state.posts
 };
+export const findPost = ({posts}, postId) => posts.find(post => post.id === postId);
 //actions
-const createActionName = actionName =>  `app/posts/${actionName}`;
+function createActionName(actionName) {
+    return `app/posts/${actionName}`;
+}
 
 //action creators
 

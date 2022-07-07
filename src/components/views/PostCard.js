@@ -4,9 +4,8 @@ import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import { Link } from 'react-router-dom';
 
-const Post = ({ postData }) => {
+const PostCard= ({ postData }) => {
 
-    console.log(postData);
     return (
         <Col xs="12" md="6" lg="4" className="p-2 justify-content-between">
             <Card className="mw-100 mt-2">
@@ -24,4 +23,4 @@ const Post = ({ postData }) => {
     )
 }
 
-export default Post;
+export default PostCard;

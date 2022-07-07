@@ -9,7 +9,7 @@ import About from './components/pages/About';
 import NotFound from './components/pages/NotFound';
 import NavBar from './components/common/NavBar';
 import Footer from './components/views/Footer.js';
-import Posts from './components/pages/Posts';
+import SinglePost from './components/pages/SinglePost';
 
 
 const App = () => {
@@ -18,9 +18,9 @@ const App = () => {
       <NavBar/>
         <Routes>
           <Route path="/" element={<Home/>}/>
-          <Route path="/post/:id" element={<Posts/>}/>
+          <Route path="/post/:postId" element={<SinglePost/>}/>
           <Route path="/post/add" element={<Add/>}/>
-          <Route path="/post/edit/:id" element={<Edit/>}/>
+          <Route path="/post/edit/:postId" element={<Edit/>}/>
           <Route path="/about" element={<About/>}/>
           <Route path="*" element={<NotFound/>}/>
         </Routes>
