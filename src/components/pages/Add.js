@@ -1,12 +1,18 @@
 import React from 'react';
+import { Row, Col, Container } from 'react-bootstrap';
+import AddPostForm from '../features/AddPostForm.js';
 
 const Add = () => {
   return (
-      <div>
-          <h2>
-            Add post here!
-          </h2>
-      </div>
+    <Container>    <Row>
+      <Col className="m-auto" lg={8}>
+        <h2>Add Post</h2>
+      </Col>
+    </Row>
+      <AddPostForm />
+    </Container>
+
+
   )
 };
 

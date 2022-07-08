@@ -31,11 +31,9 @@ const SinglePost = () => {
     handleClose();
   }
 
-  if (show) return (
+  if (show) { return (
     <ShowModal dataShow={show} handleClose={handleClose} id={postId} handleRemove={handleDelete} />
-  );
-
-  if (!currentPost) return <Navigate to="/" />
+  )} else if (!currentPost) { return <Navigate to="/" /> }
 
   return (
     <Container>
