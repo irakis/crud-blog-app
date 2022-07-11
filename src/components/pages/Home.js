@@ -1,5 +1,4 @@
 import React from 'react';
-import { Container } from 'react-bootstrap';
 import Row from 'react-bootstrap/Row';
 import PostCard from '../views/PostCard';
 import { useSelector } from 'react-redux';

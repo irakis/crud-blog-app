@@ -17,7 +17,6 @@ export const editPost = (payload) => ({type: EDIT_POST, payload});
 
 
 const postsReducer = ( statePart = [], action ) => {
-    console.log('payload: ',action.payload);
     switch (action.type) {
         case REMOVE_POST:
             return (statePart.filter(post => post.id !== action.payload));
