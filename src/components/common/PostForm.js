@@ -10,7 +10,6 @@ const PostForm = ({ action, actionText, ...props }) => {
     const [publishedDate, setPublishedDate] = useState(props.publishedDate || '');
     const [shortDescription, setShortDescription] = useState(props.shortDescription || '');
     const [content, setContent] = useState(props.content || '');
-    console.log(props, action, actionText);
 
     const handleSubmit = e => {
         e.preventDefault();

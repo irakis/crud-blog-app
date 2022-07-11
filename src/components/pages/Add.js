@@ -4,11 +4,12 @@ import AddPostForm from '../features/AddPostForm.js';
 
 const Add = () => {
   return (
-    <Container>    <Row>
-      <Col className="m-auto" lg={8}>
-        <h2>Add Post</h2>
-      </Col>
-    </Row>
+    <Container>
+      <Row>
+        <Col className="m-auto" lg={8}>
+          <h2>Add Post</h2>
+        </Col>
+      </Row>
       <AddPostForm />
     </Container>
 

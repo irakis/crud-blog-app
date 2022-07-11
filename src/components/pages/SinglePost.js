@@ -43,7 +43,7 @@ const SinglePost = () => {
         </Col>
         <Col className="mb-auto d-flex justify-content-left " lg="4" md="3" xs="2">
           <Link to={"/post/edit/" + postId}>
-            <Button className="m-2" variant="outline-info">Edit</Button>
+            <Button className="m-2" variant="outline-info" >Edit</Button>
           </Link>
           <Button onClick={handleShow} className="m-2" variant="outline-danger">Delete</Button>
         </Col>

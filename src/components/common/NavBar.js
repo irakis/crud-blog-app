@@ -15,7 +15,7 @@ const NavBar = () => {
                 <Nav className='me-auto, justify-content-end'>
                     <Nav.Link as={NavLink} to="/">Home</Nav.Link>
                     <Nav.Link as={NavLink} to="/post/add">Add</Nav.Link>
-                    <Nav.Link as={NavLink} to="/post/edit/:id">Edit</Nav.Link>
+                    <Nav.Link as={NavLink} to="/post/edit">Edit</Nav.Link>
                     <Nav.Link as={NavLink} to="/About">About</Nav.Link>
                 </Nav>
             </Container>
