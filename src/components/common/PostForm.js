@@ -3,6 +3,7 @@ import { Row, Col, Form } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import { useState } from 'react';
 import PropTypes from 'prop-types';
+import { mapDate } from "../../utils";
 
 const PostForm = ({ action, actionText, ...props }) => {
     const [title, setTitle] = useState(props.title || '');
@@ -15,25 +16,6 @@ const PostForm = ({ action, actionText, ...props }) => {
         e.preventDefault();
 
         action({ title, author, publishedDate, shortDescription, content })
-        console.log(props.publishedDate)
-    }
-
-    const addZero = (number) => {
-        if (number <10) {
-            return `0${number}`
-        }
-        else {
-            return `${number}`
-        }
-    }
-    console.log( addZero('1'));
-
-    const mapDate = (date) => {
-        const newDate = new Date(date);
-
-        return (
-            `${newDate.getFullYear()}-${addZero(newDate.getMonth()+1)}-${addZero(newDate.getDate())}`
-        )
     }
 
     return (
