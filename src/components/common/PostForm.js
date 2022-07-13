@@ -15,40 +15,64 @@ const PostForm = ({ action, actionText, ...props }) => {
         e.preventDefault();
 
         action({ title, author, publishedDate, shortDescription, content })
+        console.log(props.publishedDate)
     }
-    
-        return (
-            <Form onSubmit={handleSubmit}>
-                <Row>
-                    <Col className="m-auto" lg={8} >
-                        <Form.Group className="mb-3" controlId="formBasicTitle">
-                            <Form.Label>Title</Form.Label>
-                            <Form.Control type="text" placeholder="Enter title" value={title} onChange={e => setTitle(e.target.value)} />
-                            <Form.Label>Author</Form.Label>
-                            <Form.Control type="text" placeholder="Enter author" value={author} onChange={e => setAuthor(e.target.value)} />
-                            <Form.Label>Poblished</Form.Label>
-                            <Form.Control type="date" value={publishedDate} onChange={e => setPublishedDate(e.target.value)} />
-                            <Form.Label>Short description</Form.Label>
-                            <Form.Control rows={4} as="textarea" placeholder="Enter short description" value={shortDescription} onChange={e => setShortDescription(e.target.value)} />
-                            <Form.Label>Main content</Form.Label>
-                            <Form.Control rows={12} as="textarea" placeholder="Enter main content" value={content} onChange={e => setContent(e.target.value)} />
-                        </Form.Group>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col lg="8" className="d-flex justify-content-center w-100">
-                        <Button variant="primary" type="submit" >
-                            {actionText}
-                        </Button>
-                    </Col>
-                </Row>
-            </Form>
-        );
-    };
 
-    PostForm.propTypes = {
-        action: PropTypes.func,
-        actionText: PropTypes.string,
+    const addZero = (number) => {
+        if (number <10) {
+            return `0${number}`
+        }
+        else {
+            return `${number}`
+        }
     }
+    console.log( addZero('1'));
+
+    const mapDate = (date) => {
+        const newDate = new Date(date);
+
+        return (
+            `${newDate.getFullYear()}-${addZero(newDate.getMonth()+1)}-${addZero(newDate.getDate())}`
+        )
+    }
+
+    return (
+        <Form onSubmit={handleSubmit}>
+            <Row>
+                <Col className="m-auto" lg={8} >
+                    <Form.Group className="mb-3" controlId="formBasicTitle">
+                        <Form.Label>Title</Form.Label>
+                        <Form.Control type="text" placeholder="Enter title" value={title} onChange={e => setTitle(e.target.value)} />
+                        <Form.Label>Author</Form.Label>
+                        <Form.Control type="text" placeholder="Enter author" value={author} onChange={e => setAuthor(e.target.value)} />
+                        <Form.Label>Poblished</Form.Label>
+                        <Form.Control type="date" value={mapDate(publishedDate)} onChange={e => setPublishedDate(e.target.value)} />
+                        <Form.Label>Short description</Form.Label>
+                        <Form.Control rows={4} as="textarea" placeholder="Enter short description" value={shortDescription} onChange={e => setShortDescription(e.target.value)} />
+                        <Form.Label>Main content</Form.Label>
+                        <Form.Control rows={12} as="textarea" placeholder="Enter main content" value={content} onChange={e => setContent(e.target.value)} />
+                    </Form.Group>
+                </Col>
+            </Row>
+            <Row>
+                <Col lg="8" className="d-flex justify-content-center w-100">
+                    <Button variant="primary" type="submit" >
+                        {actionText}
+                    </Button>
+                </Col>
+            </Row>
+        </Form>
+    );
+};
+
+PostForm.propTypes = {
+    action: PropTypes.func,
+    actionText: PropTypes.string,
+    title: PropTypes.string,
+    author: PropTypes.string,
+    publishedDate: PropTypes.string,
+    shortDescription: PropTypes.string,
+    content: PropTypes.string,
+}
 
 export default PostForm;

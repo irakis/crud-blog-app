@@ -27,7 +27,7 @@ const EditPostForm = (props) => {
             actionText='Edit Post'
             title={currentPost.title}
             author={currentPost.author}
-            publishedData={currentPost.publishedData}
+            publishedDate={currentPost.publishedDate}
             shortDescription={currentPost.shortDescription}
             content={currentPost.content} />
     );
