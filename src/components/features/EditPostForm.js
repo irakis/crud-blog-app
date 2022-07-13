@@ -19,7 +19,6 @@ const EditPostForm = (props) => {
     const handleSubmit = (post) => {
         dispatch(editPost({ ...post, id }));
         navigate("/", { replace: true });
-        console.log('co to jest post?: ', post, id)
     };
 
     return (

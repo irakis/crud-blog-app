@@ -1,4 +1,4 @@
-import shortid from "shortid";
+import shortid from 'shortid';
 //selectors
 export const getAllCards = (state) => {
     return state.posts

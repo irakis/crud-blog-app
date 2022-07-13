@@ -37,7 +37,7 @@ const initialState = {
             title: 'Oceans of the Venus',
             shortDescription: 'Short description of second planet of solar system.',
             content: 'Our professional and personal lives are shifting on an unprecedented scale. Now that we’re working where we want and rethinking the value of what we do, a rigid nine-to-five office-based job seems like a quaint relic of the past. At the same time, as our work lives bleed into our private worlds, burnout, inequality and post-pandemic uncertainties are challenging us in ways that we far from fully understand',
-            publishedDate: '01-08-2008',
+            publishedDate: '20-01-2008',
             author: 'Jackline Jackson'
         }
     ],

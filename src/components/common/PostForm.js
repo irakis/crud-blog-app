@@ -13,6 +13,7 @@ const PostForm = ({ action, actionText, ...props }) => {
 
     const handleSubmit = e => {
         e.preventDefault();
+
         action({ title, author, publishedDate, shortDescription, content })
     }
     
@@ -26,7 +27,7 @@ const PostForm = ({ action, actionText, ...props }) => {
                             <Form.Label>Author</Form.Label>
                             <Form.Control type="text" placeholder="Enter author" value={author} onChange={e => setAuthor(e.target.value)} />
                             <Form.Label>Poblished</Form.Label>
-                            <Form.Control type="date" placeholder="Enter date" value={publishedDate} onChange={e => setPublishedDate(e.target.value)} />
+                            <Form.Control type="date" value={publishedDate} onChange={e => setPublishedDate(e.target.value)} />
                             <Form.Label>Short description</Form.Label>
                             <Form.Control rows={4} as="textarea" placeholder="Enter short description" value={shortDescription} onChange={e => setShortDescription(e.target.value)} />
                             <Form.Label>Main content</Form.Label>
