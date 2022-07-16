@@ -49,7 +49,9 @@ const SinglePost = () => {
         </Col>
       </Row>
       <Row>
-        <Col>{currentPost.content}</Col>
+        <Col>
+        <p dangerouslySetInnerHTML={{ __html: currentPost.content }} />
+        </Col>
       </Row>
     </Container>
   )
