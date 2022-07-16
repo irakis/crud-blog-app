@@ -4,6 +4,8 @@ import Button from 'react-bootstrap/Button';
 import { useState } from 'react';
 import PropTypes from 'prop-types';
 import { mapDate } from "../../utils";
+import ReactQuill from "react-quill";
+import 'react-quill/dist/quill.snow.css';
 
 const PostForm = ({ action, actionText, ...props }) => {
     const [title, setTitle] = useState(props.title || '');
@@ -32,7 +34,7 @@ const PostForm = ({ action, actionText, ...props }) => {
                         <Form.Label>Short description</Form.Label>
                         <Form.Control rows={4} as="textarea" placeholder="Enter short description" value={shortDescription} onChange={e => setShortDescription(e.target.value)} />
                         <Form.Label>Main content</Form.Label>
-                        <Form.Control rows={12} as="textarea" placeholder="Enter main content" value={content} onChange={e => setContent(e.target.value)} />
+                        <ReactQuill theme="snow" value={content} onChange={setContent}></ReactQuill>
                     </Form.Group>
                 </Col>
             </Row>
