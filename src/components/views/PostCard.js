@@ -3,6 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import { Link } from 'react-router-dom';
+import { dateToStr } from '../../utils/dateToStr';
 
 const PostCard= ({ postData }) => {
 
@@ -12,7 +13,7 @@ const PostCard= ({ postData }) => {
                 <Card.Body>
                     <Card.Title>{postData.title}</Card.Title>
                     <Card.Text><b>Author:  </b>{postData.author}</Card.Text>
-                    <Card.Text><b>Published:  </b>{postData.publishedDate}</Card.Text>
+                    <Card.Text><b>Published:  </b>{dateToStr(postData.publishedDate)}</Card.Text>
                     <Card.Text>{postData.shortDescription}</Card.Text>
                     <Link to={"/post/" + postData.id}>
                         <Button variant="primary">Read more</Button>

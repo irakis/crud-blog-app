@@ -12,9 +12,6 @@ const EditPostForm = (props) => {
     const id = props.postId;
 
     const currentPost = useSelector(state => findPost(state, id));
-    console.log(currentPost);
-
-
 
     const handleSubmit = (post) => {
         dispatch(editPost({ ...post, id }));
@@ -24,7 +21,7 @@ const EditPostForm = (props) => {
     return (
         <PostForm
             action={handleSubmit}
-            actionText='Edit Post'
+            actionText="Edit Post"
             title={currentPost.title}
             author={currentPost.author}
             publishedDate={currentPost.publishedDate}

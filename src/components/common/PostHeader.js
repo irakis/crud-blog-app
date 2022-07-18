@@ -1,5 +1,6 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
+import {dateToStr} from '../../utils/dateToStr';
 
 const PostHeader = (props) => {
 
@@ -8,7 +9,7 @@ const PostHeader = (props) => {
             <Card.Body>
                 <Card.Title>Title: {props.postData.title}</Card.Title>
                 <Card.Text><b>Author:  </b>{props.postData.author}</Card.Text>
-                <Card.Text><b>Published:  </b>{props.postData.publishedDate}</Card.Text>
+                <Card.Text><b>Published:  </b>{dateToStr(props.postData.publishedDate)}</Card.Text>
             </Card.Body>
         </Card>
     )
