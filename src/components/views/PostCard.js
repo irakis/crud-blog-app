@@ -14,6 +14,7 @@ const PostCard= ({ postData }) => {
                     <Card.Title>{postData.title}</Card.Title>
                     <Card.Text><b>Author:  </b>{postData.author}</Card.Text>
                     <Card.Text><b>Published:  </b>{dateToStr(postData.publishedDate)}</Card.Text>
+                    <Card.Text><b>Category: </b>{postData.category}</Card.Text>
                     <Card.Text>{postData.shortDescription}</Card.Text>
                     <Link to={"/post/" + postData.id}>
                         <Button variant="primary">Read more</Button>

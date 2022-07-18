@@ -10,6 +10,8 @@ import NotFound from './components/pages/NotFound';
 import NavBar from './components/common/NavBar';
 import Footer from './components/views/Footer.js';
 import SinglePost from './components/pages/SinglePost';
+import Categories from './components/pages/Categories.js';
+import Category from './components/pages/Category';
 
 
 const App = () => {
@@ -21,6 +23,8 @@ const App = () => {
           <Route path="/post/:postId" element={<SinglePost/>}/>
           <Route path="/post/add" element={<Add/>}/>
           <Route path="/post/edit/:postId" element={<Edit/>}/>
+          <Route path="/Categories" element={<Categories/>}/>
+          <Route path="/Category/:category" element={<Category/>} />
           <Route path="/about" element={<About/>}/>
           <Route path="*" element={<NotFound/>}/>
         </Routes>

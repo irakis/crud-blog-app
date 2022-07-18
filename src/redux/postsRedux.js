@@ -1,9 +1,8 @@
 import shortid from 'shortid';
 //selectors
-export const getAllCards = (state) => {
-    return state.posts
-};
+export const getAllCards = (state) => { return state.posts };
 export const findPost = ({posts}, postId) => posts.find(post => post.id === postId);
+export const getCategoryPosts = ({posts}, category) => posts.filter(post =>post.category === category );
 //actions
 const createActionName = actionName => `app/posts/${actionName}`;
 const REMOVE_POST = createActionName('REMOVE_POST');
