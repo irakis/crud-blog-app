@@ -9,7 +9,7 @@ function SelectOptionForm() {
   return (
     <Form.Select>
       <option>Open this select menu</option>
-      {allCategories.map(category => <Option props={category}/>)}
+      {allCategories.map(category => <Option props={category} key={category}/>)}
     </Form.Select>
   )
 }

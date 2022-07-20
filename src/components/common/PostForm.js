@@ -3,7 +3,7 @@ import { Row, Col, Form } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import { useState } from 'react';
 import PropTypes from 'prop-types';
-import ReactQuill from "react-quill";
+import { CustomQuill as ReactQuill } from "../features/CustomQuill";
 import 'react-quill/dist/quill.snow.css';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
