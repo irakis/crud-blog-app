@@ -5,7 +5,6 @@ import List from '../views/List';
 
 const Categories = () => {
     const allCategories = useSelector(getAllCategories);
-    console.log(allCategories)
 
     return (
         <div>

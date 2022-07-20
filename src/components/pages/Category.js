@@ -11,7 +11,7 @@ const Category = () => {
     return (
         <div>
             <h2>Category: </h2>
-            <Row className="justify-content-between align-items-between">
+            <Row className="justify-content-left">
                 {categoryPosts.map(card => <PostCard postData={card} key={card.id} />)}
             </Row>
         </div>
