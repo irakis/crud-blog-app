@@ -45,7 +45,7 @@ const PostForm = ({ action, actionText, ...props }) => {
                         <DatePicker selected={publishedDate} onChange={date => setPublishedDate(date)} />
                         {dateError && <small className="d-block form-text text-danger mt-2">This field is required</small>}
                         <Form.Label>Category:</Form.Label>
-                        <SelectOptionForm className="mt-2"/>
+                        <SelectOptionForm data={props.category} className="mt-2"/>
                         <Form.Label>Short description</Form.Label>
                         <Form.Control {...register("description", { required: true, minLength: 20 })} rows={4} as="textarea" placeholder="Enter short description" value={shortDescription} onChange={e => setShortDescription(e.target.value)} />
                         {errors.description && <small className="d-block form-text text-danger mt-2">This field is required with the length min. 20 characters</small>}

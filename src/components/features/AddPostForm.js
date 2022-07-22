@@ -15,7 +15,7 @@ const AddPostForm = () => {
         };
 
     return (
-        <PostForm action={handleSubmit} actionText='Add Post'/>
+        <PostForm category="Open this select file..." action={handleSubmit} actionText='Add Post'/>
         )
 }
 

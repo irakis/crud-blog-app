@@ -25,6 +25,7 @@ const EditPostForm = (props) => {
             title={currentPost.title}
             author={currentPost.author}
             publishedDate={currentPost.publishedDate}
+            category={currentPost.category}
             shortDescription={currentPost.shortDescription}
             content={currentPost.content} />
     );

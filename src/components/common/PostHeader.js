@@ -10,6 +10,7 @@ const PostHeader = (props) => {
                 <Card.Title>Title: {props.postData.title}</Card.Title>
                 <Card.Text><b>Author:  </b>{props.postData.author}</Card.Text>
                 <Card.Text><b>Published:  </b>{dateToStr(props.postData.publishedDate)}</Card.Text>
+                <Card.Text><b>Category:  </b>{props.postData.category}</Card.Text>
             </Card.Body>
         </Card>
     )
